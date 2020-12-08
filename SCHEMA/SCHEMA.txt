@@ -1,0 +1,72 @@
+//은행 테이블
+create table BANK(
+BCODE number,
+BNAME varchar2(6),
+BADD varchar2(40),
+primary key(BCODE)
+);
+
+
+//분점 테이블
+create table BRANCH(
+BRCODE number,
+BCODE number,
+BRNAME varchar2(20),
+BRADD varchar2(40),
+primary key(BRCODE),
+foreign key(BCODE) references BANK
+);
+
+
+//사람 테이블
+create table PERSON(
+PERSON_NUM varchar2(15),
+PNAME varchar2(10),
+PHONE varchar2(15),
+primary key(PERSON_NUM)
+);
+
+
+//직원 테이블
+create table STAFF(
+SNUM number,
+PERSON_NUM varchar2(15),
+POSITION varchar2(6),
+primary key(SNUM),
+foreign key(PERSON_NUM) references PERSON
+);
+
+
+//고객 테이블
+create table CLIENT(
+CNUM number,
+PERSON_NUM varchar2(15),
+primary key(CNUM),
+foreign key(PERSON_NUM) references PERSON
+);
+
+
+//통장 테이블
+create table BANKBOOK(
+BBCODE number,
+BBKIND varchar2(6),
+BBNAME varchar2(22),
+PERCENT number,
+LIMIT number,
+primary key(BBCODE)
+);
+
+
+//계좌 테이블
+create table ACCOUNT(
+ACCOUNT_NUM varchar2(15),
+CNUM number,
+SNUM number,
+BBCODE number,
+CREATE_DAY varchar2(10),
+MONEY number,
+primary key(ACCOUNT_NUM),
+foreign key(CNUM) references CLIENT,
+foreign key(SNUM) references STAFF,
+foreign key(BBCODE) references BANKBOOK
+);

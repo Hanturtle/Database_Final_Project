@@ -11,12 +11,12 @@ public class FrameMain extends JFrame {
 	public void FL(){
 		
 		frame = new JFrame();
-		frame.setBounds(100, 100, 609, 532);
+		frame.setBounds(100, 100, 1000, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JToolBar toolBar = new JToolBar();
-		toolBar.setBounds(126, 8, 330, 23);
+		toolBar.setBounds(221, 117, 531, 36);
 		frame.getContentPane().add(toolBar);
 		
 		textField = new JTextField();
@@ -24,69 +24,80 @@ public class FrameMain extends JFrame {
 		textField.setColumns(10);
 		
 		JButton btnNewButton = new JButton("°Ë»ö");
+		btnNewButton.setFont(new Font("±¼¸²", Font.BOLD, 12));
 		toolBar.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("»ðÀÔ");
+		btnNewButton_1.setFont(new Font("±¼¸²", Font.BOLD, 12));
 		toolBar.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("»èÁ¦");
+		btnNewButton_2.setFont(new Font("±¼¸²", Font.BOLD, 12));
 		toolBar.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("º¯°æ");
+		btnNewButton_3.setFont(new Font("±¼¸²", Font.BOLD, 12));
 		toolBar.add(btnNewButton_3);
 		
-		JList list = new JList();
-		list.setBounds(12, 33, 99, 289);
-		list.setBackground(Color.CYAN);
-		frame.getContentPane().add(list);
+		JList staff_list = new JList();
+		staff_list.setBounds(23, 165, 176, 261);
+		staff_list.setBackground(new Color(211, 211, 211));
+		frame.getContentPane().add(staff_list);
 		
-		JTextArea client_info = new JTextArea("client_info");
-		client_info.setBounds(468, 33, 113, 289);
-		client_info.setBackground(Color.GRAY);
-		frame.getContentPane().add(client_info);
+		JTextArea client_detail = new JTextArea("client_detail");
+		client_detail.setBounds(783, 160, 176, 266);
+		client_detail.setBackground(new Color(211, 211, 211));
+		frame.getContentPane().add(client_detail);
 		
-		JList list_1 = new JList();
-		list_1.setBounds(126, 41, 330, 281);
-		list_1.setBackground(Color.YELLOW);
-		frame.getContentPane().add(list_1);
+		JTextArea account_detail = new JTextArea();
+		account_detail.setBackground(new Color(255, 182, 193));
+		account_detail.setText("account_detail");
+		account_detail.setBounds(23, 478, 601, 173);
+		frame.getContentPane().add(account_detail);
 		
-		JTextArea bankbook_info = new JTextArea();
-		bankbook_info.setText("bankbook_info");
-		bankbook_info.setBounds(10, 357, 237, 126);
-		frame.getContentPane().add(bankbook_info);
+		JTextArea bankbook_detail = new JTextArea();
+		bankbook_detail.setBackground(new Color(255, 182, 193));
+		bankbook_detail.setText("bankbook_detail");
+		bankbook_detail.setBounds(636, 478, 322, 173);
+		frame.getContentPane().add(bankbook_detail);
 		
-		JTextArea account_info = new JTextArea();
-		account_info.setText("account_info");
-		account_info.setBounds(259, 357, 322, 126);
-		frame.getContentPane().add(account_info);
-		
-		JTextField staff_name = new JTextField();
-		staff_name.setText("Á÷¿ø¸í");
-		staff_name.setBounds(12, 8, 99, 21);
+		JLabel staff_name = new JLabel("\uC9C1\uC6D0\uBA85");
+		staff_name.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		staff_name.setBounds(87, 117, 50, 33);
 		frame.getContentPane().add(staff_name);
-		staff_name.setColumns(10);
 		
-		JTextField client_name = new JTextField();
-		client_name.setText("°í°´ Á¤º¸");
-		client_name.setBounds(468, 8, 116, 21);
-		frame.getContentPane().add(client_name);
-		client_name.setColumns(10);
+		JLabel label = new JLabel("\uACE0\uAC1D \uC815\uBCF4");
+		label.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		label.setBounds(839, 117, 65, 33);
+		frame.getContentPane().add(label);
 		
-		JTextField bankbook = new JTextField();
-		bankbook.setText("ÅëÀå Á¤º¸");
-		bankbook.setBounds(12, 332, 116, 21);
-		frame.getContentPane().add(bankbook);
-		bankbook.setColumns(10);
+		JLabel label_1 = new JLabel("\uD1B5\uC7A5 \uC815\uBCF4");
+		label_1.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		label_1.setBounds(24, 445, 81, 23);
+		frame.getContentPane().add(label_1);
 		
-		JTextField account = new JTextField();
-		account.setText("°èÁÂ Á¤º¸");
-		account.setBounds(259, 332, 116, 21);
-		frame.getContentPane().add(account);
-		account.setColumns(10);
+		JLabel label_2 = new JLabel("\uACC4\uC88C \uC815\uBCF4");
+		label_2.setFont(new Font("±¼¸²", Font.BOLD, 15));
+		label_2.setBounds(639, 445, 81, 23);
+		frame.getContentPane().add(label_2);
+		
+		ImageIcon nh = new ImageIcon("logo.png");
+		JLabel logo = new JLabel(nh);
+		logo.setBounds(12, 16, 517, 59);
+		frame.getContentPane().add(logo);
+		
+		JLabel name = new JLabel("20184404_ÇÑÁö¿ø");
+		name.setBounds(851, 0, 107, 46);
+		frame.getContentPane().add(name);
+		
+		JTable consulting_list = new JTable();
+		consulting_list.setBackground(new Color(255, 255, 255));
+		consulting_list.setBounds(231, 163, 521, 261);
+		frame.getContentPane().add(consulting_list);
 		
 		frame.setTitle("Á÷¿øº° °³¼³ °èÁÂ ¹× °í°´ Á¤º¸ Á¶È¸");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(600,400);
+		frame.setSize(1000,700);
 		frame.setVisible(true);
 	}
 }

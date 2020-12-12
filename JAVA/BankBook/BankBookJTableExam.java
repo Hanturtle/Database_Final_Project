@@ -62,6 +62,9 @@ public class BankBookJTableExam extends JFrame implements ActionListener{
 		
 		vo.bankbookSelect(dt);
 		
+		
+		
+		
 		if(dt.getRowCount() > 0)
 			jt.setRowSelectionInterval(0, 0);//첫번째 행 선택
 		

@@ -8,16 +8,16 @@ import java.sql.SQLException;
 import BankConsulting.MainDB;
 
 public class BankBookDelete {
-	//private Connection con;
+	private Connection con;
 	private PreparedStatement ps = null;
 	MainDB mDB;
 	
 	public int bankbookDelete(String bbcode) {
 		int result = 0;
-		//con = new MainDB().connect();
+		con = new MainDB().connect();
 		
 		try {
-			ps = mDB.conn.prepareStatement("delete BANKBOOK where id = ?");
+			ps = con.prepareStatement("delete BANKBOOK where BBCODE = ?");
 			ps.setString(1, bbcode.trim());
 			result = ps.executeUpdate();
 		}

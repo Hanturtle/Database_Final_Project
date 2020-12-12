@@ -31,7 +31,7 @@ public class MainDB {
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "jiwon_homework", "4404");
 			System.out.println("성공적으로 접속하였음");
 			stmt = conn.createStatement();
-			new FrameMain().FL();
+			//new FrameMain().FL();
 		} catch (ClassNotFoundException e) {
 			System.out.println("해당드라이버를찾을수없습니다.\n" + e);
 		} catch (SQLException e) {
@@ -60,7 +60,8 @@ public class MainDB {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new MainDB().connect();
+		//new MainDB().connect();
+		new FrameMain().FL();
 	}
 
 }

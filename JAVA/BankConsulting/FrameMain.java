@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import STAFF.*;
 
 public class FrameMain extends JFrame {
 
@@ -44,7 +45,9 @@ public class FrameMain extends JFrame {
 		JButton search_button = new JButton("°Ë»ö");
 		search_button.setFont(new Font("±¼¸²", Font.BOLD, 12));
 
-		JLabel staff_info = new JLabel("\uC9C1\uC6D0 \uC815\uBCF4");
+		//Á÷¿ø Á¤º¸
+		new StaffJTableExam();
+		/*JLabel staff_info = new JLabel("\uC9C1\uC6D0 \uC815\uBCF4");
 
 		staff_info.setFont(new Font("±¼¸²", Font.BOLD, 15));
 		staff_info.setBounds(41, 103, 90, 33);
@@ -77,7 +80,7 @@ public class FrameMain extends JFrame {
 		S_table = new JTable();
 		S_table.setBackground(Color.BLUE);
 		S_table.setBounds(34, 188, 236, 180);
-		frame.getContentPane().add(S_table);
+		frame.getContentPane().add(S_table);*/
 
 		JLabel client_info = new JLabel("\uACE0\uAC1D \uC815\uBCF4");
 		client_info.setFont(new Font("±¼¸²", Font.BOLD, 15));

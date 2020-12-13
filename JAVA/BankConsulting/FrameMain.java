@@ -1,6 +1,7 @@
 package BankConsulting;
 
 import BankConsulting.MainDB;
+import Client.*;
 import BankBook.*;
 
 import javax.swing.*;
@@ -47,13 +48,13 @@ public class FrameMain extends JFrame {
 
 		//Á÷¿ø Á¤º¸
 		new StaffJTableExam();
-		/*JLabel staff_info = new JLabel("\uC9C1\uC6D0 \uC815\uBCF4");
+		JLabel staff_info = new JLabel("\uC9C1\uC6D0 \uC815\uBCF4");
 
 		staff_info.setFont(new Font("±¼¸²", Font.BOLD, 15));
 		staff_info.setBounds(41, 103, 90, 33);
 		frame.getContentPane().add(staff_info);
 
-		JToolBar S_toolBar = new JToolBar();
+		/*JToolBar S_toolBar = new JToolBar();
 		S_toolBar.setBounds(34, 142, 236, 36);
 		frame.getContentPane().add(S_toolBar);
 
@@ -82,12 +83,15 @@ public class FrameMain extends JFrame {
 		S_table.setBounds(34, 188, 236, 180);
 		frame.getContentPane().add(S_table);*/
 
+		
+		//°í°´ Á¤º¸
+		new ClientJTableExam();
 		JLabel client_info = new JLabel("\uACE0\uAC1D \uC815\uBCF4");
 		client_info.setFont(new Font("±¼¸²", Font.BOLD, 15));
 		client_info.setBounds(304, 108, 81, 23);
 		frame.getContentPane().add(client_info);
 
-		JToolBar C_toolBar = new JToolBar();
+		/*JToolBar C_toolBar = new JToolBar();
 		C_toolBar.setBounds(303, 142, 265, 36);
 		frame.getContentPane().add(C_toolBar);
 
@@ -114,7 +118,7 @@ public class FrameMain extends JFrame {
 		C_table = new JTable();
 		C_table.setBackground(Color.GREEN);
 		C_table.setBounds(303, 188, 265, 180);
-		frame.getContentPane().add(C_table);
+		frame.getContentPane().add(C_table);*/
 
 		JLabel book_info = new JLabel("\uD1B5\uC7A5 \uC815\uBCF4");
 		book_info.setFont(new Font("±¼¸²", Font.BOLD, 15));

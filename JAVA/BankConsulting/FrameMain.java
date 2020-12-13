@@ -3,6 +3,7 @@ package BankConsulting;
 import BankConsulting.MainDB;
 import Client.*;
 import BankBook.*;
+import Account.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -160,12 +161,15 @@ public class FrameMain extends JFrame {
 		BB_table.setBounds(590, 188, 368, 180);
 		frame.getContentPane().add(BB_table);*/
 
+		
+		//계좌 관련 정보
+		new AccountJTableExam();
 		JLabel account_info = new JLabel("\uACC4\uC88C \uC815\uBCF4");
 		account_info.setBounds(51, 397, 96, 31);
 		frame.getContentPane().add(account_info);
 		account_info.setFont(new Font("굴림", Font.BOLD, 20));
 
-		JToolBar Account_toolBar = new JToolBar();
+		/*JToolBar Account_toolBar = new JToolBar();
 		Account_toolBar.setBounds(427, 397, 531, 36);
 		frame.getContentPane().add(Account_toolBar);
 
@@ -192,7 +196,7 @@ public class FrameMain extends JFrame {
 		JTable AC_table = new JTable();
 		AC_table.setBackground(Color.MAGENTA);
 		AC_table.setBounds(34, 443, 925, 208);
-		frame.getContentPane().add(AC_table);
+		frame.getContentPane().add(AC_table);*/
 
 		frame.setTitle("직원별 개설 계좌 및 고객 정보 조회");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
